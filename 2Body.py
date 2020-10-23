@@ -79,10 +79,10 @@ def plot_2body(X_1, Y_1, Z_1, X_2, Y_2, Z_2, X_G, Y_G, Z_G):
     ax.set_zlabel('eje-z (km)')
         
     plt.legend(loc='upper right')
-    
-    plt.show() 
     plt.savefig('Mov_3.png')
 
+    plt.show() 
+    
 
 #########################################
 
@@ -103,7 +103,7 @@ y_0=np.concatenate([R1_0, R2_0, V1_0 ,V2_0])
 
 #solver
 
-t=np.arange(t0,tf)
+t=np.arange(t0,tf) #tiempo
 
 x=odeint(rates, y_0, t , args= (m_1, m_2))  
 
